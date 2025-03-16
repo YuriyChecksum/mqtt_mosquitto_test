@@ -16,17 +16,18 @@
 
 ## Данные для подключения:
 The server listens on the following ports:
-1883 : MQTT, unencrypted, unauthenticated
-1884 : MQTT, unencrypted, authenticated
-8883 : MQTT, encrypted, unauthenticated
-8884 : MQTT, encrypted, client certificate required
-8885 : MQTT, encrypted, authenticated
-8886 : MQTT, encrypted, unauthenticated
-8887 : MQTT, encrypted, server certificate deliberately expired
-8080 : MQTT over WebSockets, unencrypted, unauthenticated
-8081 : MQTT over WebSockets, encrypted, unauthenticated
-8090 : MQTT over WebSockets, unencrypted, authenticated
-8091 : MQTT over WebSockets, encrypted, authenticated
+- 1883 : MQTT, unencrypted, unauthenticated
+- 1884 : MQTT, unencrypted, authenticated
+- 8883 : MQTT, encrypted, unauthenticated
+- 8884 : MQTT, encrypted, client certificate required
+- 8885 : MQTT, encrypted, authenticated
+- 8886 : MQTT, encrypted, unauthenticated
+- 8887 : MQTT, encrypted, server certificate deliberately expired
+- 8080 : MQTT over WebSockets, unencrypted, unauthenticated
+- 8081 : MQTT over WebSockets, encrypted, unauthenticated
+- 8090 : MQTT over WebSockets, unencrypted, authenticated
+- 8091 : MQTT over WebSockets, encrypted, authenticated
+
 The encrypted ports support TLS v1.3, v1.2 or v1.1 with x509 certificates and require client support to connect. For ports 8883 and 8884 you should use the certificate authority file (mosquitto.org.crt (PEM format), or mosquitto.org.der (DER format)) to verify the server connection. Ports 8081 and 8886 have a Lets Encrypt certificate, so you should use your system CA certificates or the appropriate Lets Encrypt CA certificate for verification.
 
 Port 8884 requires clients to provide a certificate to authenticate their connection. You can generate your own certificate.
